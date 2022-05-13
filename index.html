@@ -10,15 +10,6 @@
 		<meta name="author" content="Joe Li" />
 		<!-- Core theme CSS (includes Bootstrap)-->
 		<link href="css/styles.css" rel="stylesheet" />
-	<script src="https://cdn.jsdelivr.net/npm/angular@1.8.2/angular.min.js" integrity="sha256-JBA69Iue4ECckXjNkuul3DzfDHaCe3wmXE9vaBtNwXY=" crossorigin="anonymous"></script>
-	<script>
-	<!--
-	var app = angular.module("app", [])
-	app.controller("appCtrl", function($scope) {
-		$scope.today = new Date();
-	});
-	// -->
-	</script>
 	</head>
 	<body id="page-top" ng-app="app">
 		<!-- Navigation-->
@@ -227,17 +218,23 @@
 							<p>Start Bootstrap creates free, open source, MIT license, Bootstrap themes, templates, and code snippets for you to use on any project, guides to help you learn more about designing and developing with the Bootstrap framework, and premium Bootstrap UI products.</p>
 						</div>
 					</div>
-					<div class="social-icons mb-5">
-						<a class="social-icon" target="external" href="https://www.facebook.com/hongkongjoeli" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-						<a class="social-icon" target="external" href="https://www.linkedin.com/in/joeli" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-						<span class="d-none d-lg-inline mr-4"><a class="social-icon" target="wechat" href="#" onclick="return false" role="button" data-toggle="popover" data-placement="bottom" data-trigger="focus" title="Wechat ID" data-content="hkjoeli"><i class="fab fa-weixin"></i></a></span>
-						<span class="d-inline d-lg-none mr-4"><a class="social-icon" target="wechat" href="weixin://" role="button" data-toggle="popover" data-placement="bottom" data-trigger="focus" title="Wechat ID" data-content="hkjoeli" style="background-color:#2aae67"><i class="fab fa-weixin"></i></a></span>
-						<a class="social-icon" target="external" href="https://user.qzone.qq.com/51152507" title="QQ"><i class="fab fa-qq"></i></a>
-						<a class="social-icon" target="external" href="https://vk.com/hkjoeli" title="VK"><i class="fab fa-vk"></i></a>
-						<a class="social-icon" target="external" href="https://www.paypal.com/paypalme/hkjoeli/7.99USD" title="PayPal Donation" style="background-color:#0070ba"><i class="fab fa-paypal"></i></a>
+					<div class="social-icons mb-3">
+						<a class="social-icon mb-3" target="external" href="https://www.facebook.com/hongkongjoeli" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+						<a class="social-icon mb-3" target="external" href="https://www.linkedin.com/in/joeli" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+						<span class="d-none d-lg-inline mr-4"><a class="social-icon mb-3" target="wechat" href="#" onclick="return false" role="button" data-toggle="popover" data-placement="bottom" data-trigger="focus" title="Wechat ID" data-content="hkjoeli"><i class="fab fa-weixin"></i></a></span>
+						<span class="d-inline d-lg-none mr-4"><a class="social-icon mb-3" target="wechat" href="weixin://" role="button" data-toggle="popover" data-placement="bottom" data-trigger="focus" title="Wechat ID" data-content="hkjoeli" style="background-color:#2aae67"><i class="fab fa-weixin"></i></a></span>
+						<a class="social-icon mb-3" target="external" href="https://user.qzone.qq.com/51152507" title="QQ"><i class="fab fa-qq"></i></a>
+						<a class="social-icon mb-3" target="external" href="https://vk.com/hkjoeli" title="VK"><i class="fab fa-vk"></i></a>
+						<a class="social-icon mb-3" target="external" href="https://discord.gg/eC6wjy2sXC" title="Discord"><i class="fab fa-discord"></i></a>
+						<a class="social-icon mb-3" target="external" href="https://www.paypal.com/paypalme/hkjoeli/7.99USD" title="PayPal" style="background-color:#0070ba"><i class="fab fa-paypal"></i></a>
 					</div>
-		    		<div ng-controller="appCtrl" class="small">
-						&copy;{{today|date:'yyyy'}} Joe Li. All rights reserved. All product names, logos, brands, trademarks and registered trademarks are property of their respective owners. All company, product and service names used in this website are for identification purposes only. Use of these names, trademarks and brands does not imply endorsement.
+					<div class="mb-3">
+<a title="GDPR-compliant Web Analytics" href="https://clicky.com/101366241"><img alt="Clicky" src="https://static.getclicky.com/media/links/badge.gif" border="0" /></a>
+<script async src="//static.getclicky.com/101366241.js"></script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="https://in.getclicky.com/101366241ns.gif" /></p></noscript>
+					</div>
+		    		<div class="small">
+						&copy; <span id="thisyear"></span> Joe Li. All rights reserved. All product names, logos, brands, trademarks and registered trademarks are property of their respective owners. All company, product and service names used in this website are for identification purposes only. Use of these names, trademarks and brands does not imply endorsement.
 					</div>
 				</div>
 			</section>
@@ -250,10 +247,14 @@
 	<!-- Core theme JS-->
 	<script src="js/scripts.js"></script>
 	<!-- Font Awesome icons (free version)-->
-	<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" defer></script>
 	<script>
 	$(function() {
 		$("[data-toggle=popover]").popover();
+		var thisyear = new Date().getFullYear();
+		if (thisyear >= 1998) {
+			$(document.getElementById("thisyear")).html(thisyear);
+		}
 	});
 	</script>
 	<!-- CDN fonts -->
